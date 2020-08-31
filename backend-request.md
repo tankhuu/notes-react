@@ -35,6 +35,21 @@ handleUpdate = async (post) => {
     await axios.put(`${apiEndpoint}/${post.id}`, post);
     //await axios.patch(`${apiEndpoint}/${post.id}`, { title: post.title });
   };
+
+# DELETE
+handleDelete = async (post) => {
+    const originalPosts = this.state.posts;
+
+    const posts = this.state.posts.filter((p) => p.id !== post.id);
+    this.setState({ posts });
+
+    try {
+      await axios.delete(`${apiEndpoint}/${post.id}`);
+    } catch (err) {
+      alert("Something failed while deleting  a post");
+      this.setState({ posts: originalPosts });
+    }
+  };
 ```
 
 ## Lifecyle of a Request
