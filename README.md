@@ -1,2 +1,2 @@
-# react-notes
+# notes-react
 Notes for React
