@@ -91,3 +91,23 @@ Then we will call the server. If this call fails, we can reverse ui back to the 
 - Catch if something goes wrong:
   - show error or alert
   - rollback the state to the original state
+
+### Extracting a Config Module
+
+#### Definition
+
+```
+// file ./config.json
+
+{
+  "apiEndpoint": "https://jsonplaceholder.typicode.com/posts"
+}
+```
+
+#### Usage
+
+```
+import config from "./config.json";
+
+const { data: posts } = await http.get(config.apiEndpoint);
+```
