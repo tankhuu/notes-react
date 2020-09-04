@@ -21,3 +21,9 @@ npm start
 cd app-name
 vi README.md
 ```
+
+## Uninstallation
+
+It's no longer use create-react-app we use npx instead of
+
+`sudo npm uninstall -g create-react-app`
