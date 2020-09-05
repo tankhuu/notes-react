@@ -7,7 +7,7 @@
 ## Usage
 
 ```
-// file App.js
+// file: App.js
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
@@ -22,7 +22,7 @@ render() {
 ```
 
 ```
-// file httpService.js
+// file: httpService.js
 
 import { toast } from "react-toastify";
 
